@@ -42,6 +42,7 @@ class App extends Component {
     //console.log(localStorage.getItem('citys'));
     if (!cacheDate || cacheDate === 'undefined'){
       localStorage.setItem('citys',JSON.stringify(initialState));
+      cacheDate = localStorage.getItem('citys'); 
     }
     const { citys, actions ,wactions} = this.props
     
