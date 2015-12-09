@@ -1,3 +1,4 @@
+
 module.exports.getConfig = function(type) {
 
   var isDev = type === 'development';
@@ -10,13 +11,18 @@ module.exports.getConfig = function(type) {
     },
     debug : isDev,
     module: {
-      loaders: [{
+      loaders: [
+      {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel',
         query: {
-          presets: ['react', 'es2015']
-        }
+            presets: ['react', 'es2015']
+          },
+      },
+      {
+        include: /\.json$/, 
+        loaders: ["json-loader"]
       }]
     }
   };
@@ -27,3 +33,4 @@ module.exports.getConfig = function(type) {
 
   return config;
 }
+

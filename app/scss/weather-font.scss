@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'weather';
+    src: url('../font/artill_clean_icons-webfont.eot');
+    src: url('../font/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/artill_clean_icons-webfont.woff') format('woff'),
+         url('../font/artill_clean_icons-webfont.ttf') format('truetype'),
+         url('../font/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.wi {
+  font-family: weather;
+  //font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.0;
+}
+
+.wi-icon-0:before { content: ":"; }
+.wi-icon-1:before { content: "p"; }
+.wi-icon-2:before { content: "S"; }
+.wi-icon-3:before { content: "Q"; }
+.wi-icon-4:before { content: "S"; }
+.wi-icon-5:before { content: "W"; }
+.wi-icon-6:before { content: "W"; }
+.wi-icon-7:before { content: "W"; }
+.wi-icon-8:before { content: "W"; }
+.wi-icon-9:before { content: "I"; }
+.wi-icon-10:before { content: "W"; }
+.wi-icon-11:before { content: "I"; }
+.wi-icon-12:before { content: "I"; }
+.wi-icon-13:before { content: "I"; }
+.wi-icon-14:before { content: "I"; }
+.wi-icon-15:before { content: "W"; }
+.wi-icon-16:before { content: "I"; }
+.wi-icon-17:before { content: "W"; }
+.wi-icon-18:before { content: "U"; }
+.wi-icon-19:before { content: "Z"; }
+.wi-icon-20:before { content: "Z"; }
+.wi-icon-21:before { content: "Z"; }
+.wi-icon-22:before { content: "Z"; }
+.wi-icon-23:before { content: "Z"; }
+.wi-icon-24:before { content: "E"; }
+.wi-icon-25:before { content: "E"; }
+.wi-icon-26:before { content: "3"; }
+.wi-icon-27:before { content: "a"; }
+.wi-icon-28:before { content: "A"; }
+.wi-icon-29:before { content: "a"; }
+.wi-icon-30:before { content: "A"; }
+.wi-icon-31:before { content: "6"; }
+.wi-icon-32:before { content: "1"; }
+.wi-icon-33:before { content: "6"; }
+.wi-icon-34:before { content: "1"; }
+.wi-icon-35:before { content: "W"; }
+.wi-icon-36:before { content: "1"; }
+.wi-icon-37:before { content: "S"; }
+.wi-icon-38:before { content: "S"; }
+.wi-icon-39:before { content: "S"; }
+.wi-icon-40:before { content: "M"; }
+.wi-icon-41:before { content: "W"; }
+.wi-icon-42:before { content: "I"; }
+.wi-icon-43:before { content: "W"; }
+.wi-icon-44:before { content: "a"; }
+.wi-icon-45:before { content: "S"; }
+.wi-icon-46:before { content: "U"; }
+.wi-icon-47:before { content: "S"; }

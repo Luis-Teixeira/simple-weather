@@ -42,6 +42,12 @@ gulp.task('html', function() {
     .pipe($.connect.reload());
 });
 
+gulp.task('font', function() {
+  return gulp.src(app + 'font/**/*.{eot,svg,ttf,woff,otf}')
+    .pipe($.size({ title : 'font' }))
+    .pipe(gulp.dest(dist + 'font/'));
+});
+
 gulp.task('styles',function(cb) {
   
   // convert scss to css
@@ -90,9 +96,9 @@ gulp.task('clean', function(cb) {
 
 
 // by default build project and then watch files in order to trigger livereload
-gulp.task('default', ['images', 'html','scripts', 'styles', 'serve', 'watch']);
+gulp.task('default', ['images','font', 'html','scripts', 'styles', 'serve', 'watch']);
 
 // waits until clean is finished then builds the project
-gulp.task('build', ['clean'], function(){
-  gulp.start(['images', 'html','scripts','styles']);
+gulp.task('build',  function(){
+  gulp.start(['clean','images','font', 'html','scripts','styles']);
 });

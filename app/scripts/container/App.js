@@ -8,33 +8,47 @@ import CitysWarper from '../components/CitysWarper'
 
 import * as CityActions from '../actions/citys'
 
-const initialState = [
+let initialState = [
 
   {
-    name: 'porto',
+    name: 'lisboa',
     id: 0,
     result:false,
     isFetching: true
    
   },
   {
-    name: 'lisboa',
+    name: 'porto',
     id: 1,
     result:false,
     isFetching: true
    
-  },
+  }
   
 ]
 
 class App extends Component {
+  
+
+  componentDidMount(){
+    //this.cache();
+  }
+  componentDidUpdate(){
+    localStorage.setItem('citys',JSON.stringify(this.props.citys));
+  }
+
   render() {
+    let cacheDate = localStorage.getItem('citys');
+    //console.log(localStorage.getItem('citys'));
+    if (!cacheDate || cacheDate === 'undefined'){
+      localStorage.setItem('citys',JSON.stringify(initialState));
+    }
     const { citys, actions ,wactions} = this.props
-    //console.log(this.props.citys, this.props.actions);
+    
     return (
       <section className="weather-warper">
        	<CitysWarper citys={citys} actions={actions} />
-        <CityHandler default={initialState} citys={citys} addCity={actions.addCity}/>
+        <CityHandler default={JSON.parse(cacheDate)} citys={citys} addCity={actions.addCity}/>
       </section>
     )
   }

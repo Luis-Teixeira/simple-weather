@@ -1,5 +1,4 @@
 import { ADD_CITY, REMOVE_CITY, EDIT_CITY , GET_CITY_WEATHER ,RECEIVE_CITY_WEATHER,INVALID_WEATHER } from '../actions/citys'
-import { RECEIVE_WEATHER } from '../actions/weather'
 
 const initialState = [
 
@@ -29,7 +28,7 @@ function citys(state = initialState , action) {
         {
           name: action.name,
           id: state.reduce((maxId, city) => Math.max(city.id, maxId), -1) + 1,
-          result: action.result,
+          //result: action.result,
           isFetching: false
         }
       ]
@@ -58,17 +57,7 @@ function citys(state = initialState , action) {
         }
       ]
     return
-    // case INVALID_WEATHER:
-    //   console.log(state, action.id);
-    //   return [
-    //     ...state.slice(0, action.id),
-    //     Object.assign({}, state[action.id], {
-    //       invalid: true
-
-    //     })
-    //   ]
-    // return
-
+   
     case RECEIVE_CITY_WEATHER:
       return [
         ...state.slice(0, action.id),

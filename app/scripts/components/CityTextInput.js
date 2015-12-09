@@ -34,7 +34,7 @@ class CityTextInput extends Component {
 
   render() {
     return (
-      <div className="">
+      <div className={this.props.className}>
         <input  ref={node => {this.input = node}}
                 type="text"
                 placeholder={this.props.placeholder}

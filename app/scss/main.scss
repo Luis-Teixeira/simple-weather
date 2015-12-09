@@ -1,3 +1,100 @@
 @import 'normalize';
 @import 'helper';
 
+@import 'weather-font';
+
+.clearfix {
+	clear: both;
+}
+.citys-warper {
+	background-color: #1F8C8B;
+	color: #eee;
+	width: 300px;
+}
+
+.weather-list {
+	padding: 10px 5px 0 5px;
+	margin: 0;
+}
+
+.weather-list-item {
+	list-style: none;
+	position: relative;
+	min-height: 115px;
+}
+
+.next-weather  {
+	float:left;
+	text-align: center;
+	font-size: 12px;
+	margin: 0 5px;
+	width: 60px;
+	margin-top: -10px;
+	.icon-weather {
+		font-size: 40px;
+	}
+}
+
+.weather-itens-warper {
+	margin: 0 0 12px 0;
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgba(238, 238, 238,.4);
+}
+
+.next-weather-temp {
+	font-size: 12px;
+	.softer {
+		opacity: .7;
+	}
+}
+
+.city-name {
+	text-transform: capitalize;
+	float: left;
+	font-size: 20px;
+	font-weight: 100;
+	margin-right: 10px;
+	opacity: .7;
+}
+
+.clock {
+	float: left;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.destroy {
+	position: absolute;
+	top:0;
+	right: 0;
+	border: 0;
+	background-color: transparent;
+}
+
+.footer {
+	width: 300px;
+	//background-color: #1F8C8B;
+	.input {
+		input {
+			//line-height: 20px;
+			height: 30px;
+			padding: 0 5px;
+			width: 50%;
+		}
+		button {
+			border: 0;
+			height: 34px;
+			padding: 5px;
+			width: 40%;
+			float: right;
+		}
+	}
+	.input.disabled {
+		opacity: .3;
+		button,
+		input {
+			cursor: default;
+      pointer-events: none;
+		}
+	}
+}

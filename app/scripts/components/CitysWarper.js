@@ -16,9 +16,9 @@ class CitysWarper extends Component {
     const { citys, actions } = this.props
     //console.log(citys);
     return (
-      <section className="main">
+      <section className="citys-warper main">
         
-        <ul className="citys-list">
+        <ul className="weather-list clearfix">
         { citys.map(city => 
           <CityItem key={city.id} city={city} {...actions}/>
         )}
