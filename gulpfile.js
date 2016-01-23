@@ -4,7 +4,7 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
 // set variable via $ gulp --type production
-var environment = $.util.env.type || 'development';
+var environment = $.util.env.type || 'production';
 var isProduction = environment === 'production';
 var webpackConfig = require('./webpack.config.js').getConfig(environment);
 
@@ -13,7 +13,7 @@ var app = 'app/';
 var dist = 'dist/';
 
 // https://github.com/ai/autoprefixer
-var autoprefixerBrowsers = [                 
+var autoprefixerBrowsers = [
   'ie >= 9',
   'ie_mob >= 10',
   'ff >= 30',
@@ -49,14 +49,14 @@ gulp.task('font', function() {
 });
 
 gulp.task('styles',function(cb) {
-  
+
   // convert scss to css
   return gulp.src(app + 'scss/main.scss')
     .pipe($.sass({
       // only compress if we are in production
       // include 'normal' css into main.css
     }))
-    .pipe($.autoprefixer({browsers: autoprefixerBrowsers})) 
+    .pipe($.autoprefixer({browsers: autoprefixerBrowsers}))
     .pipe(gulp.dest(dist + 'css/'))
     .pipe($.size({ title : 'css' }))
     .pipe($.connect.reload());
